@@ -6,6 +6,8 @@
 
 #include <stdexcept>
 
+using namespace std;
+
 template <typename E> class LinkedBinaryTree; // forward declaration to be used when declaring TNode
 template <typename E> class Position; // forward declaration to be used when declaring TNode
 
