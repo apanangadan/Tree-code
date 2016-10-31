@@ -7,23 +7,23 @@ using namespace std;
 int main() {
 
 	/* create the following binary tree:
-	    8
+	    9
 	   / \
 	  7   11
 	 /  \
-	 3    4
+	 3    8
 	/ \
-	5   2
+	2   5
 	*/
 
 	LinkedBinaryTree<int> tree;
-	tree.addRoot(8);
+	tree.addRoot(9);
 	tree.addLeftLeaf(tree.root(), 7);
 	tree.addRightLeaf(tree.root(), 11);
 	tree.addLeftLeaf(tree.root().left(), 3);
-	tree.addLeftLeaf(tree.root().left().left(), 5);
-	tree.addRightLeaf(tree.root().left().left(), 2);
-	tree.addRightLeaf(tree.root().left(), 4);
+	tree.addLeftLeaf(tree.root().left().left(), 2);
+	tree.addRightLeaf(tree.root().left().left(), 5);
+	tree.addRightLeaf(tree.root().left(), 8);
 
 	cout << "Preorder:" << endl;
 	tree.preorderPrint();
