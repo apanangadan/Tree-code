@@ -157,9 +157,9 @@ void LinkedBinaryTree<E>::inorderPrint() const {
 template <typename E>
 void LinkedBinaryTree<E>::inorder(TNode<E> *v) const {
 	if (v == NULL) return;
-	preorder(v->left);
+	inorder(v->left);
 	cout << v->elem << endl;
-	preorder(v->right);
+	inorder(v->right);
 }
 
 template <typename E>
@@ -170,8 +170,8 @@ void LinkedBinaryTree<E>::postorderPrint() const {
 template <typename E>
 void LinkedBinaryTree<E>::postorder(TNode<E> *v) const {
 	if (v == NULL) return;
-	preorder(v->left);
-	preorder(v->right);
+	postorder(v->left);
+	postorder(v->right);
 	cout << v->elem << endl;
 }
 
