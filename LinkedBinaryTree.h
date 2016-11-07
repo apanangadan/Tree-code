@@ -35,6 +35,11 @@ public:
 	{
 		return v->elem;
 	}
+	E& operator*() const                   		// get const element
+	{
+      		return v->elem;
+   	}
+
 	Position left() const				// get left child
 	{
 		return Position(v->left);
